@@ -1,0 +1,16 @@
+Source: openmediavault-links
+Section: misc
+Priority: optional
+Maintainer: Aaron Murray <aaron@omv-extras.org>
+Build-Depends: debhelper (>= 7 )
+Standards-Version: 3.9.3
+Homepage: http://omv-extras.org/
+
+Package: openmediavault-links
+Architecture: all
+Depends: ${misc:Depends}, openmediavault (>= 0.5)
+Description: OpenMediaVault links plugin
+ Plugin to add links to the OpenMediaVault web
+ interface that are stored in the database and
+ can be viewed/clicked to open a new tab/window
+ for that link.
