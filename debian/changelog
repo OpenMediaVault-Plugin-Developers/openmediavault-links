@@ -1,3 +1,9 @@
+openmediavault-links (0.5.1) stable; urgency=low
+
+  * Add to repo
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.prg>  Mon, 07 Oct 2013 14:29:38 -0500
+
 openmediavault-links (0.5.0) stable; urgency=low
 
   * Initial release
