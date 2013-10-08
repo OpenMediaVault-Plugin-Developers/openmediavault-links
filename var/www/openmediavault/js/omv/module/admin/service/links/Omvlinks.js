@@ -63,7 +63,7 @@ Ext.define("OMV.module.admin.service.links.Omvlinks", {
 OMV.WorkspaceManager.registerPanel({
 	id: "omvlinks",
 	path: "/service/links",
-	text: _("Suggested Sites"),
+	text: _("Common URLs"),
 	position: 20,
 	className: "OMV.module.admin.service.links.Omvlinks"
 });
