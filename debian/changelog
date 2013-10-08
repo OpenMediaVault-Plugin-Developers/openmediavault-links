@@ -1,3 +1,9 @@
+openmediavault-links (0.5.3) stable; urgency=low
+
+  * Fix link
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Mon, 07 Oct 2013 22:04:38 -0500
+
 openmediavault-links (0.5.2) stable; urgency=low
 
   * Add suggested links tab

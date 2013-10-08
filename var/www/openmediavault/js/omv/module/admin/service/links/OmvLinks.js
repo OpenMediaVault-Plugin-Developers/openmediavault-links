@@ -43,7 +43,7 @@ Ext.define("OMV.module.admin.service.links.Omvlinks", {
 			"<b>Ext JS 4.2</b><br/><a href='http://docs.sencha.com/extjs/4.2.2/#' target='_blank'>http://docs.sencha.com/extjs/4.2.2/#</a><br/><br/>" +
 			"<b>JSFiddle</b><br/><a href='http://jsfiddle.net/' target='_blank'>http://jsfiddle.net/</a><br/><br/>" +
 			"<b>GitHub</b><br/><a href='https://github.com/' target='_blank'>https://github.com/</a><br/><br/>" +
-			"<b>Subversion</b><br/><a href='http://subversion.apache.org/' target='_blank'>https://github.com/</a><br/><br/>" +
+			"<b>Subversion</b><br/><a href='http://subversion.apache.org/' target='_blank'>http://subversion.apache.org/</a><br/><br/>" +
 			"<b>Bugtracker</b><br/><a href='http://bugtracker.openmediavault.org' target='_blank'>http://bugtracker.openmediavault.org</a><br/><br/>" +
 			"<b>Aptana</b><br/><a href='http://www.aptana.com/' target='_blank'>http://www.aptana.com/</a><br/><br/>" +
 			"<b>Tortoise SVN</b><br/><a href='http://tortoisesvn.net/' target='_blank'>http://tortoisesvn.net/</a><br/><br/>" +	
@@ -51,7 +51,6 @@ Ext.define("OMV.module.admin.service.links.Omvlinks", {
 			"<b>Putty</b><br/><a href='http://www.putty.org/' target='_blank'>http://www.putty.org/</a><br/><br/>" +
 			"<b>SystemRescueCD</b><br/><a href='http://www.sysresccd.org/' target='_blank'>https://www.sysresccd.org/</a><br/><br/>" +
 			"<b>Parted Magic</b><br/><a href='http://partedmagic.com/' target='_blank'>http://partedmagic.com/</a><br/>");
-	http://subversion.apache.org/
 		me.html += "</form>";
 		me.callParent(arguments);
 	},
