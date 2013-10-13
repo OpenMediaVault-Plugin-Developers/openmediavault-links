@@ -50,8 +50,8 @@ Ext.define("OMV.module.admin.service.links.Omvlinks", {
 			"<b>Notepad++</b><br/><a href='http://notepad-plus-plus.org/' target='_blank'>http://notepad-plus-plus.org/</a><br/><br/>" +
 			"<b>Putty</b><br/><a href='http://www.putty.org/' target='_blank'>http://www.putty.org/</a><br/><br/>" +
 			"<b>SystemRescueCD</b><br/><a href='http://www.sysresccd.org/' target='_blank'>https://www.sysresccd.org/</a><br/><br/>" +
-			"<b>Parted Magic</b><br/><a href='http://partedmagic.com/' target='_blank'>http://partedmagic.com/</a><br/>");
-			"<b>Clonezilla</b><br/><a href='http://clonezilla.org/' target='_blank'>http://clonezilla.org/</a><br/>");
+			"<b>Parted Magic</b><br/><a href='http://partedmagic.com/' target='_blank'>http://partedmagic.com/</a><br/><br/>" +
+			"<b>Clonezilla</b><br/><a href='http://clonezilla.org/' target='_blank'>http://clonezilla.org/</a><br/><br/>" +
 			"<b>GParted</b><br/><a href='http://gparted.sourceforge.net/index.php' target='_blank'>http://gparted.sourceforge.net/index.php</a><br/>");
 		me.html += "</form>";
 		me.callParent(arguments);

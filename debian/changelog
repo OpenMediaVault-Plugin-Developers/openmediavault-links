@@ -1,3 +1,9 @@
+openmediavault-links (0.5.6) stable; urgency=low
+
+  * fix typo
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Sun, 13 Oct 2013 11:52:38 -0500
+
 openmediavault-links (0.5.5) stable; urgency=low
 
   * Added clonezilla and gparted links
