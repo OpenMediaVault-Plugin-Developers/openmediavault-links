@@ -38,7 +38,6 @@ Ext.define("OMV.module.admin.service.links.Omvlinks", {
 			"<b>OMVfacebook</b><br/><a href='https://www.facebook.com/pages/OpenMediaVault/107543672670199' target='_blank'>https://www.facebook.com/pages/OpenMediaVault/107543672670199</a><br/><br/>" +
 			"<b>OMVtwitter</b><br/><a href='https://twitter.com/OpenMediaVault' target='_blank'>https://twitter.com/OpenMediaVault</a><br/><br/>" +
 			"<b>OMVblog</b><br/><a href='http://blog.openmediavault.org/' target='_blank'>http://blog.openmediavault.org/</a><br/><br/>" +
-			"<b>GitHub</b><br/><a href='https://github.com/' target='_blank'>https://github.com/</a><br/><br/>" +
 			"<b>Documentation</b><br/><a href='http://docs.openmediavault.org' target='_blank'>http://docs.openmediavault.org</a><br/><br/>" +
 			"<b>Ext JS 4.2</b><br/><a href='http://docs.sencha.com/extjs/4.2.2/#' target='_blank'>http://docs.sencha.com/extjs/4.2.2/#</a><br/><br/>" +
 			"<b>JSFiddle</b><br/><a href='http://jsfiddle.net/' target='_blank'>http://jsfiddle.net/</a><br/><br/>" +
