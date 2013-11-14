@@ -1,3 +1,9 @@
+openmediavault-links (0.5.8) stable; urgency=low
+
+  * added locales
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Thu, 14 Nov 2013 10:56:27 -0500
+
 openmediavault-links (0.5.7) stable; urgency=low
 
   * remove duplicate link

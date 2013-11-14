@@ -3,38 +3,37 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Cyryl Sochacki <cyrylsochacki@gmail.com>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-links\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-11-14 10:55-0600\n"
-"PO-Revision-Date: 2013-10-31 17:57+0000\n"
-"Last-Translator: Cyryl Sochacki <cyrylsochacki@gmail.com>\n"
-"Language-Team: Polish (Poland) (http://www.transifex.com/projects/p/openmediavault-links/language/pl_PL/)\n"
+"PO-Revision-Date: 2013-10-28 14:47+0000\n"
+"Last-Translator: ryecoaaron <aaron27@ryecoinc.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: pl_PL\n"
-"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Language: en_US\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 msgid "Add link"
-msgstr "Dodaj link"
+msgstr "Add link"
 
 msgid "Common URLs"
-msgstr "Wspólne adresy URL"
+msgstr "Common URLs"
 
 msgid "Edit link"
-msgstr "Edytuj link"
+msgstr "Edit link"
 
 msgid "Group"
-msgstr "Grupa"
+msgstr "Group"
 
 msgid "Links"
-msgstr "Linki"
+msgstr "Links"
 
 msgid "Name"
-msgstr "Nazwa"
+msgstr "Name"
 
 msgid "URL"
-msgstr "Adres"
+msgstr "URL"
