@@ -98,6 +98,7 @@ Ext.define("OMV.module.admin.service.links.Links", {
         text      : _("URL"),
         sortable  : true,
         dataIndex : "url",
+        flex      : 1,
         stateId   : "url",
         renderer  : function(value) {
             return "<a href=\"" + value + "\" target=\"_blank\">" + value + "</a>";
