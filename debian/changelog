@@ -1,3 +1,10 @@
+openmediavault-links (0.6.0) stable; urgency=low
+
+  * Update to work on sardaukar and kralizec
+  * Update locales
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Mon, 17 Mar 2014 06:53:27 -0500
+
 openmediavault-links (0.5.9) stable; urgency=low
 
   * fix postrm

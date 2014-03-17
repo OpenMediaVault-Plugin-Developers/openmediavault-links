@@ -2,13 +2,13 @@ Source: openmediavault-links
 Section: misc
 Priority: optional
 Maintainer: OpenMediaVault Plugin Developers <plugins@omv-extras.org>
-Build-Depends: debhelper (>= 7 )
+Build-Depends: debhelper (>= 9.0.0 )
 Standards-Version: 3.9.3
 Homepage: http://omv-extras.org/
 
 Package: openmediavault-links
 Architecture: all
-Depends: ${misc:Depends}, openmediavault (>= 0.5), openmediavault (<< 0.6)
+Depends: ${misc:Depends}, openmediavault (>= 0.5.40)
 Description: OpenMediaVault links plugin
  Plugin to add links to the OpenMediaVault web
  interface that are stored in the database and
