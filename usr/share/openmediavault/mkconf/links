@@ -1,0 +1,126 @@
+#!/bin/bash
+#
+# Copyright (C) 2013-2014 OpenMediaVault Plugin Developers
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program. If not, see <http://www.gnu.org/licenses/>.
+
+set -e
+
+. /etc/default/openmediavault
+. /usr/share/openmediavault/scripts/helper-functions
+
+MEDIA_DIR="/var/www/openmediavault/js/omv/module/admin/service/media/"
+
+if [ ! -d "${MEDIA_DIR}" ]; then
+    mkdir -p "${MEDIA_DIR}"
+else
+    rm -rf ${MEDIA_DIR}*
+fi
+
+# create node
+cat <<EOF > "${MEDIA_DIR}Media.js"
+// require("js/omv/WorkspaceManager.js")
+
+OMV.WorkspaceManager.registerNode({
+    id      : "media",
+    path    : "/service",
+    text    : _("Media"),
+    icon16  : "images/link.png",
+    iconSvg : "images/link.svg"
+});
+EOF
+
+count=$(omv_config_get_count "//services/links/link")
+index=1
+while [ ${index} -le ${count} ]; do
+
+    createtab=$(omv_config_get "//services/links/link[position()=${index}]/createtab")
+
+    if [ ${createtab} != 0 ]; then
+        name=$(omv_config_get "//services/links/link[position()=${index}]/name")
+        group=$(omv_config_get "//services/links/link[position()=${index}]/group")
+        url=$(omv_config_get "//services/links/link[position()=${index}]/url")
+        fileupper="${MEDIA_DIR}${group}.js"
+        filelower="${MEDIA_DIR}${group}/${name}.js"
+
+        if [ ! -f "${fileupper}" ]; then
+            # create upper tab fileif not already created
+            cat <<EOF > ${fileupper}
+// require("js/omv/WorkspaceManager.js")
+// require("js/omv/PluginManager.js")
+// require("js/omv/workspace/tab/Panel.js")
+
+Ext.define("OMV.module.admin.service.media.${group}", {
+    extend : "OMV.workspace.tab.Panel",
+
+    initComponent : function() {
+        var me = this;
+        var plugins = OMV.PluginManager.get("media", "${group}");
+        me.items = [];
+        Ext.Array.each(plugins, function(plugin) {
+            me.items.push(Ext.create(plugin.className, {
+                title : plugin.text
+            }));
+        });
+        me.callParent(arguments);
+    }
+});
+
+OMV.WorkspaceManager.registerPanel({
+    id        : "${group}",
+    path      : "/service/media",
+    text      : "${group}",
+    position  : ${index},
+    className : "OMV.module.admin.service.media.${group}"
+});
+
+EOF
+        fi
+
+        # create directory for lower tab files
+        if [ ! -d "${MEDIA_DIR}${group}" ]; then
+            mkdir -p "${MEDIA_DIR}${group}"
+        fi
+
+        # Create lower tab file
+        cat <<EOF > ${filelower}
+
+// require("js/omv/PluginManager.js")
+// require("js/omv/workspace/panel/Panel.js")
+
+Ext.define("OMV.module.admin.service.media.${group}.${name}", {
+    extend : "OMV.workspace.panel.Panel",
+
+    initComponent: function() {
+        var me = this;
+        me.html = "<iframe src='${url}' width='100%' height='100%' />";
+        me.callParent(arguments);
+    }
+});
+
+OMV.PluginManager.register({
+    ptype     : "media",
+    id        : "${group}",
+    text      : "${name}",
+    position  : ${index},
+    className : "OMV.module.admin.service.media.${group}.${name}"
+});
+
+EOF
+    fi
+
+    index=$(( ${index} + 1 ))
+done
+
+chown -R openmediavault:openmediavault "${MEDIA_DIR}"

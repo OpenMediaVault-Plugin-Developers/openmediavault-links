@@ -2,10 +2,11 @@
 
 include ./openmediavault.mk
 
+PLUGIN_NAME=links
+
 clean:
 	dh_testdir
 	dh_testroot
-	rm -f build-stamp configure-stamp
 	dh_clean
 
 install:
@@ -14,6 +15,7 @@ install:
 	dh_prep
 	dh_installdirs
 	dh_install
+	chmod +x $(CURDIR)/debian/openmediavault-${PLUGIN_NAME}/usr/share/openmediavault/mkconf/${PLUGIN_NAME}
 
 binary-indep: install omv_clean_scm
 	dh_testdir

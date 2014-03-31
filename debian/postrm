@@ -26,11 +26,13 @@ set -e
 
 case "$1" in
     remove)
+        rm -rf /var/www/openmediavault/js/omv/module/admin/service/media
         ;;
 
     purge)
         # Remove the configuration data
         omv_config_delete "/config/services/links"
+        rm -rf /var/www/openmediavault/js/omv/module/admin/service/media
     ;;
 
     upgrade|failed-upgrade|abort-install|abort-upgrade|disappear)

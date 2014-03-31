@@ -1,3 +1,10 @@
+openmediavault-links (0.6.1) stable; urgency=low
+
+  * Add tab creation
+  * Update locales
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Sun, 30 Mar 2014 16:05:27 -0500
+
 openmediavault-links (0.6.0) stable; urgency=low
 
   * Update to work on sardaukar and kralizec

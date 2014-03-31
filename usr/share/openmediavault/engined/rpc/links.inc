@@ -97,6 +97,9 @@ class OMVRpcServiceLinks extends OMVRpcServiceAbstract {
         if(is_null($object))
             throw new OMVException(OMVErrorMsg::E_CONFIG_GET_OBJECT_FAILED, $xpath);
 
+        // Modify the result object.
+        $object['createtab'] = boolval($object['createtab']);
+        
         return $object;
     }
 
@@ -113,19 +116,21 @@ class OMVRpcServiceLinks extends OMVRpcServiceAbstract {
         $this->validateMethodParams($params, '{
             "type"       : "object",
             "properties" : {
-                "uuid"  : { '.$GLOBALS['OMV_JSONSCHEMA_UUID_UNDEFINED'].' },
-                "name"  : { "type" : "string" },
-                "group" : { "type" : "string" },
-                "url"   : { "type" : "string" }
+                "uuid"      : { '.$GLOBALS['OMV_JSONSCHEMA_UUID_UNDEFINED'].' },
+                "name"      : { "type" : "string" },
+                "group"     : { "type" : "string" },
+                "url"       : { "type" : "string" },
+                "createtab" : { "type" : "boolean" }
             }
         }');
 
         // Prepare configuration data.
         $object = array(
-            "uuid"  => ($params['uuid'] == $GLOBALS['OMV_UUID_UNDEFINED']) ? OMVUtil::uuid() : $params['uuid'],
-            "name"  => $params['name'],
-            "group" => $params['group'],
-            "url"   => $params['url']
+            "uuid"      => ($params['uuid'] == $GLOBALS['OMV_UUID_UNDEFINED']) ? OMVUtil::uuid() : $params['uuid'],
+            "name"      => $params['name'],
+            "group"     => $params['group'],
+            "url"       => $params['url'],
+            "createtab" => array_boolval($params, 'createtab'),
         );
 
         // Set the configuration data.
