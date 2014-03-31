@@ -50,7 +50,11 @@ Ext.define("OMV.module.admin.service.links.Link", {
             xtype      : "textfield",
             name       : "name",
             fieldLabel : _("Name"),
-            allowBlank : false
+            allowBlank : false,
+            plugins    : [{
+                ptype : "fieldinfo",
+                text  : _("No spaces allowed in name.")
+            }]
         },{
             xtype      : "textfield",
             name       : "group",
