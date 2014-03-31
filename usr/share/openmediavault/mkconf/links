@@ -36,8 +36,8 @@ OMV.WorkspaceManager.registerNode({
     id      : "media",
     path    : "/service",
     text    : _("Media"),
-    icon16  : "images/link.png",
-    iconSvg : "images/link.svg"
+    icon16  : "images/tv.png",
+    iconSvg : "images/tv.svg"
 });
 EOF
 
