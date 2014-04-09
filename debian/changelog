@@ -1,3 +1,10 @@
+openmediavault-links (0.6.2) stable; urgency=low
+
+  * Fix sort for multiple pages
+  * Update locales
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Wed, 09 Apr 2014 06:24:27 -0500
+
 openmediavault-links (0.6.1) stable; urgency=low
 
   * Add tab creation
@@ -72,4 +79,4 @@ openmediavault-links (0.5.0) stable; urgency=low
 
  -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Mon, 07 Oct 2013 13:14:38 -0500
 
- 
+

@@ -131,7 +131,12 @@ Ext.define("OMV.module.admin.service.links.Links", {
                         service : "Links",
                         method  : "getLinks"
                     }
-                }
+                },
+                remoteSort : true,
+                sorters    : [{
+                    direction : "ASC",
+                    property  : "name"
+                }]
             })
         });
         me.callParent(arguments);
