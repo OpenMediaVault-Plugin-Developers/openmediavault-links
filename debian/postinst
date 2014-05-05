@@ -25,22 +25,27 @@ set -e
 . /usr/share/openmediavault/scripts/helper-functions
 
 case "$1" in
-	configure)
+    configure)
 
-		if ! omv_config_exists "/config/services/links"; then
-			echo "Initialize configuration"
-			omv_config_add_element "/config/services" "links"
-		fi
+        if ! omv_config_exists "/config/services/links"; then
+            echo "Initialize configuration"
+            omv_config_add_element "/config/services" "links"
+        fi
 
-	;;
+        omv_set_default OMV_NGINX_SITE_WEBGUI_SECURITY_CSP_ENABLE 0
+        omv_set_default OMV_NGINX_SITE_WEBGUI_SECURITY_XFRAMEOPTIONS_ENABLE false
 
-	abort-upgrade|abort-remove|abort-deconfigure)
-	;;
+        dpkg-trigger update-fixperms
+        dpkg-trigger update-locale
+    ;;
 
-	*)
-		echo "postinst called with unknown argument '$1'" >&2
-		exit 1
-	;;
+    abort-upgrade|abort-remove|abort-deconfigure)
+    ;;
+
+    *)
+        echo "postinst called with unknown argument '$1'" >&2
+        exit 1
+    ;;
 esac
 
 exit 0
