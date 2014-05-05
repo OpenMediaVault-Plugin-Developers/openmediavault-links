@@ -35,6 +35,9 @@ case "$1" in
         omv_set_default OMV_NGINX_SITE_WEBGUI_SECURITY_CSP_ENABLE 0
         omv_set_default OMV_NGINX_SITE_WEBGUI_SECURITY_XFRAMEOPTIONS_ENABLE false
 
+        omv-mkconf nginx
+        invoke-rc.d nginx restart
+
         dpkg-trigger update-fixperms
         dpkg-trigger update-locale
     ;;
