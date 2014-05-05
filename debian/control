@@ -8,7 +8,7 @@ Homepage: http://omv-extras.org/
 
 Package: openmediavault-links
 Architecture: all
-Depends: ${misc:Depends}, openmediavault (>= 0.6.10)
+Depends: ${misc:Depends}, openmediavault (>= 0.6.0.10)
 Description: OpenMediaVault links plugin
  Plugin to add links to the OpenMediaVault web
  interface that are stored in the database and
