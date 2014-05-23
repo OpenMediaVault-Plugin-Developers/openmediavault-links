@@ -43,11 +43,13 @@ EOF
 
 count=$(omv_config_get_count "//services/links/link")
 index=1
+disable_csp=0
 while [ ${index} -le ${count} ]; do
 
     createtab=$(omv_config_get "//services/links/link[position()=${index}]/createtab")
 
     if [ ${createtab} != 0 ]; then
+        disable_csp=1
         name=$(omv_config_get "//services/links/link[position()=${index}]/name")
         group=$(omv_config_get "//services/links/link[position()=${index}]/group")
         url=$(omv_config_get "//services/links/link[position()=${index}]/url")
@@ -124,3 +126,12 @@ EOF
 done
 
 chown -R openmediavault:openmediavault "${MEDIA_DIR}"
+
+# Disable csp if iframes are used
+if [ ${disable_csp} != 0 ]; then
+    omv_set_default OMV_NGINX_SITE_WEBGUI_SECURITY_CSP_ENABLE 0
+    omv_set_default OMV_NGINX_SITE_WEBGUI_SECURITY_XFRAMEOPTIONS_ENABLE false
+
+    omv-mkconf nginx
+    invoke-rc.d nginx restart
+fi

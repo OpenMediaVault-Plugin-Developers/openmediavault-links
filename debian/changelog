@@ -1,3 +1,9 @@
+openmediavault-links (0.6.4) UNRELEASED; urgency=low
+
+  * Only disable CSP when iframes are used
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Fri, 23 May 2014 12:33:32 -0500
+
 openmediavault-links (0.6.3) stable; urgency=low
 
   * Update for nginx
