@@ -60,7 +60,7 @@ while [ ${index} -le ${count} ]; do
             # create upper tab fileif not already created
             cat <<EOF > ${fileupper}
 // require("js/omv/WorkspaceManager.js")
-// require("js/omv/PluginManager.js")
+// require("js/omv/MediaManager.js")
 // require("js/omv/workspace/tab/Panel.js")
 
 Ext.define("OMV.module.admin.service.media.${group}", {
@@ -68,7 +68,7 @@ Ext.define("OMV.module.admin.service.media.${group}", {
 
     initComponent : function() {
         var me = this;
-        var plugins = OMV.PluginManager.get("media", "${group}");
+        var plugins = OMV.MediaManager.get("media", "${group}");
         me.items = [];
         Ext.Array.each(plugins, function(plugin) {
             me.items.push(Ext.create(plugin.className, {
@@ -98,7 +98,7 @@ EOF
         # Create lower tab file
         cat <<EOF > ${filelower}
 
-// require("js/omv/PluginManager.js")
+// require("js/omv/MediaManager.js")
 // require("js/omv/workspace/panel/Panel.js")
 
 Ext.define("OMV.module.admin.service.media.${group}.${name}", {
@@ -111,7 +111,7 @@ Ext.define("OMV.module.admin.service.media.${group}.${name}", {
     }
 });
 
-OMV.PluginManager.register({
+OMV.MediaManager.register({
     ptype     : "media",
     id        : "${group}",
     text      : "${name}",
