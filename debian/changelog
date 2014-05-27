@@ -1,8 +1,9 @@
-openmediavault-links (0.6.4) UNRELEASED; urgency=low
+openmediavault-links (0.6.4) stable; urgency=low
 
   * Only disable CSP when iframes are used
+  * Convert to use mediamanager class
 
- -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Fri, 23 May 2014 12:33:32 -0500
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Tue, 27 May 2014 06:00:17 -0500
 
 openmediavault-links (0.6.3) stable; urgency=low
 
