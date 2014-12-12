@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# songming <by@songming.me>, 2013-2014
+# Hyeonkyu Chu <hyeonkyu@gmail.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-links\n"
@@ -11,33 +11,33 @@ msgstr ""
 "POT-Creation-Date: 2014-03-30 23:19-0500\n"
 "PO-Revision-Date: 2014-11-14 19:49+0000\n"
 "Last-Translator: Aaron Murray <aaron27@ryecoinc.com>\n"
-"Language-Team: Chinese (China) (http://www.transifex.com/projects/p/openmediavault-links/language/zh_CN/)\n"
+"Language-Team: Korean (Korea) (http://www.transifex.com/projects/p/openmediavault-links/language/ko_KR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: zh_CN\n"
+"Language: ko_KR\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 msgid "Add link"
-msgstr "添加链接"
+msgstr "연결 추가"
 
 msgid "Common URLs"
-msgstr "相关网址"
+msgstr "공통 URLs"
 
 msgid "Create Tab"
-msgstr "创建标签"
+msgstr "탭 만들기"
 
 msgid "Edit link"
-msgstr "编辑链接"
+msgstr "연결 편집"
 
 msgid "Group"
-msgstr "组"
+msgstr "그룹"
 
 msgid "Links"
-msgstr "链接"
+msgstr "Links"
 
 msgid "Name"
-msgstr "名称"
+msgstr "이름"
 
 msgid "URL"
-msgstr "URL地址"
+msgstr "URL"
