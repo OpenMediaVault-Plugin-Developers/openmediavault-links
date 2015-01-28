@@ -1,3 +1,9 @@
+openmediavault-links (1.1) stable; urgency=low
+
+  * Clear cache when adding media tab
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Wed, 28 Jan 2015 06:59:07 -0600
+
 openmediavault-links (1.0) stable; urgency=low
 
   * Add custom debian/control field XB-Plugin-Section

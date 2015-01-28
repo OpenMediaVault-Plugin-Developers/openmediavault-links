@@ -135,3 +135,5 @@ if [ ${disable_csp} != 0 ]; then
     omv-mkconf nginx
     invoke-rc.d nginx restart
 fi
+
+omv_purge_internal_cache
