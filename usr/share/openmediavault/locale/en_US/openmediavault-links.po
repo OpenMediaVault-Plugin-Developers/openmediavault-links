@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-links\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-03-30 23:19-0500\n"
-"PO-Revision-Date: 2014-11-14 19:49+0000\n"
+"POT-Creation-Date: 2015-03-25 10:08-0500\n"
+"PO-Revision-Date: 2015-03-25 15:11+0000\n"
 "Last-Translator: Aaron Murray <aaron27@ryecoinc.com>\n"
 "Language-Team: English (United States) (http://www.transifex.com/projects/p/openmediavault-links/language/en_US/)\n"
 "MIME-Version: 1.0\n"
@@ -23,9 +23,6 @@ msgstr "Add link"
 msgid "Common URLs"
 msgstr "Common URLs"
 
-msgid "Create Tab"
-msgstr "Create Tab"
-
 msgid "Edit link"
 msgstr "Edit link"
 
@@ -35,8 +32,17 @@ msgstr "Group"
 msgid "Links"
 msgstr "Links"
 
+msgid "Media Tab"
+msgstr "Media Tab"
+
 msgid "Name"
 msgstr "Name"
+
+msgid "No spaces allowed in name."
+msgstr "No spaces allowed in name."
+
+msgid "Preset"
+msgstr "Preset"
 
 msgid "URL"
 msgstr "URL"

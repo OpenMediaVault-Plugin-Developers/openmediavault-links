@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-links\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-03-30 23:19-0500\n"
-"PO-Revision-Date: 2014-11-14 19:49+0000\n"
+"POT-Creation-Date: 2015-03-25 10:08-0500\n"
+"PO-Revision-Date: 2015-03-25 15:11+0000\n"
 "Last-Translator: Aaron Murray <aaron27@ryecoinc.com>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/projects/p/openmediavault-links/language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
@@ -24,9 +24,6 @@ msgstr "添加链接"
 msgid "Common URLs"
 msgstr "相关网址"
 
-msgid "Create Tab"
-msgstr "创建标签"
-
 msgid "Edit link"
 msgstr "编辑链接"
 
@@ -36,8 +33,17 @@ msgstr "组"
 msgid "Links"
 msgstr "链接"
 
+msgid "Media Tab"
+msgstr ""
+
 msgid "Name"
 msgstr "名称"
+
+msgid "No spaces allowed in name."
+msgstr ""
+
+msgid "Preset"
+msgstr ""
 
 msgid "URL"
 msgstr "URL地址"

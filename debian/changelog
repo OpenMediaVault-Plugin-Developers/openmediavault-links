@@ -1,6 +1,7 @@
 openmediavault-links (1.2) stable; urgency=low
 
   * Add presets for plugins
+  * Update locales
 
  -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Wed, 25 Mar 2015 10:07:17 -0500
 
