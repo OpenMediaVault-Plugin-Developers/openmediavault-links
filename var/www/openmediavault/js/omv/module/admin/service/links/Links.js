@@ -151,7 +151,6 @@ Ext.define("OMV.module.admin.service.links.Links", {
         stateId   : "url",
         renderer  : function(value) {
             var link = value.replace("\" + location.hostname + \"", location.hostname);
-            alert(link);
             return "<a href=\"" + link + "\" target=\"_blank\">" + link + "</a>";
         }
     }],
