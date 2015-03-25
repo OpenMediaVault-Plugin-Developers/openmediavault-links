@@ -1,3 +1,9 @@
+openmediavault-links (1.2) stable; urgency=low
+
+  * Add presets for plugins
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Wed, 25 Mar 2015 10:07:17 -0500
+
 openmediavault-links (1.1) stable; urgency=low
 
   * Clear cache when adding media tab

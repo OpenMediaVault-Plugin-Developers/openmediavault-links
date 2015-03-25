@@ -3,7 +3,7 @@
  * @author    Volker Theile <volker.theile@openmediavault.org>
  * @author    OpenMediaVault Plugin Developers <plugins@omv-extras.org>
  * @copyright Copyright (c) 2009-2013 Volker Theile
- * @copyright Copyright (c) 2013-2014 OpenMediaVault Plugin Developers
+ * @copyright Copyright (c) 2013-2015 OpenMediaVault Plugin Developers
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -47,6 +47,49 @@ Ext.define("OMV.module.admin.service.links.Link", {
 
     getFormItems : function() {
         return [{
+            xtype      : "combo",
+            name       : "preset",
+            fieldLabel : _("Preset"),
+            store      : Ext.create("OMV.data.Store", {
+                autoLoad : true,
+                model    : OMV.data.Model.createImplicit({
+                    idProperty : "name",
+                    fields     : [{
+                        name : "name",
+                        type : "string"
+                    }, {
+                        name : "url",
+                        type : "string"
+                    }],
+                    proxy : {
+                        type    : "rpc",
+                        rpcData : {
+                            service : "Links",
+                            method  : "enumeratePresets"
+                        },
+                        appendSortParams : false
+                    }
+                })
+            }),
+            allowBlank     : true,
+            displayField   : "name",
+            editable       : true,
+            forceSelection : true,
+            listeners      : {
+                scope  : this,
+                select : function(combo, records) {
+                    var record = records[0];
+                    var nameField = this.findField("name");
+                    var urlField = this.findField("url");
+                    nameField.setValue(record.get("name"));
+                    urlField.setValue(record.get("url"));
+                }
+            },
+            queryMode     : "local",
+            submitValue   : false,
+            triggerAction : "all",
+            valueField    : "url"
+        },{
             xtype      : "textfield",
             name       : "name",
             fieldLabel : _("Name"),
@@ -107,7 +150,9 @@ Ext.define("OMV.module.admin.service.links.Links", {
         flex      : 1,
         stateId   : "url",
         renderer  : function(value) {
-            return "<a href=\"" + value + "\" target=\"_blank\">" + value + "</a>";
+            var link = value.replace("\" + location.hostname + \"", location.hostname);
+            alert(link);
+            return "<a href=\"" + link + "\" target=\"_blank\">" + link + "</a>";
         }
     }],
 
