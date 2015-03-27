@@ -133,6 +133,9 @@ Ext.define("OMV.module.admin.service.links.Links", {
     hidePagingToolbar : false,
     stateful          : true,
     stateId           : "a982a76d-6804-4632-b31b-8b48c0ea6dde",
+    features          : [{
+        ftype : "grouping"
+    }],    
     columns           : [{
         text      : _("Name"),
         sortable  : true,
@@ -159,8 +162,9 @@ Ext.define("OMV.module.admin.service.links.Links", {
         var me = this;
         Ext.apply(me, {
             store : Ext.create("OMV.data.Store", {
-                autoLoad : true,
-                model    : OMV.data.Model.createImplicit({
+                autoLoad   : true,
+                groupField : "group",
+                model      : OMV.data.Model.createImplicit({
                     idProperty  : "uuid",
                     fields      : [
                         { name : "uuid", type : "string" },
@@ -176,7 +180,13 @@ Ext.define("OMV.module.admin.service.links.Links", {
                         method  : "getLinks"
                     }
                 },
-                remoteSort : true
+                sorters : [{
+                    direction : "ASC",
+                    property  : "name"
+                },{
+                    direction : "ASC",
+                    property  : "group"
+                }]
             })
         });
         me.callParent(arguments);

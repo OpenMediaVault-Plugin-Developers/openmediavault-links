@@ -246,7 +246,7 @@ class OMVRpcServiceLinks extends OMVRpcServiceAbstract {
 
         $presets[] = ["name" => "eXtplorer", "url" => "/extplorer/"];
         $presets[] = ["name" => "GateOne", "url" => "https://\" + location.hostname + \":8777/gateone/"];
-        $presets[] = ["name" => "Media Browser", "url" => "http://\" + location.hostname + \":8096/mediabrowser/dashboard/dashboard.html"];
+        $presets[] = ["name" => "MediaBrowser", "url" => "http://\" + location.hostname + \":8096/mediabrowser/dashboard/dashboard.html"];
         $presets[] = ["name" => "MySql", "url" => "/mysql/"];
         $presets[] = ["name" => "Plexmediaserver", "url" => "http://\" + location.hostname + \":32400/manage"];
         $presets[] = ["name" => "PostgreSql", "url" => "/postgresql/"];
