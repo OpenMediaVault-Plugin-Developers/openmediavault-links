@@ -1,6 +1,7 @@
 openmediavault-links (1.3) stable; urgency=low
 
   * Add grouping to grid
+  * Update locales
 
  -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Fri, 27 Mar 2015 06:25:56 -0500
 

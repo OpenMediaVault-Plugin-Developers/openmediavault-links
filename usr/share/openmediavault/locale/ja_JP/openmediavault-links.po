@@ -3,14 +3,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Toshihiro Kan <kansuke4649@gmail.com>, 2014
+# Toshihiro Kan <kansuke4649@gmail.com>, 2014-2015
 msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-links\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-03-25 10:08-0500\n"
-"PO-Revision-Date: 2015-03-25 15:11+0000\n"
-"Last-Translator: Aaron Murray <aaron27@ryecoinc.com>\n"
+"PO-Revision-Date: 2015-03-27 01:22+0000\n"
+"Last-Translator: Toshihiro Kan <kansuke4649@gmail.com>\n"
 "Language-Team: Japanese (Japan) (http://www.transifex.com/projects/p/openmediavault-links/language/ja_JP/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -34,16 +34,16 @@ msgid "Links"
 msgstr "リンク"
 
 msgid "Media Tab"
-msgstr ""
+msgstr "メディアタブ"
 
 msgid "Name"
 msgstr "名前"
 
 msgid "No spaces allowed in name."
-msgstr ""
+msgstr "名前にスペースは使えません。"
 
 msgid "Preset"
-msgstr ""
+msgstr "プリセット"
 
 msgid "URL"
 msgstr "URL"
