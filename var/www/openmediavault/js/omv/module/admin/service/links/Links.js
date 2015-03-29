@@ -130,7 +130,6 @@ Ext.define("OMV.module.admin.service.links.Links", {
         "OMV.module.admin.service.links.Link"
     ],
 
-    hidePagingToolbar : false,
     stateful          : true,
     stateId           : "a982a76d-6804-4632-b31b-8b48c0ea6dde",
     features          : [{
