@@ -78,7 +78,10 @@ Ext.define("OMV.module.admin.service.links.Link", {
             listeners      : {
                 scope  : this,
                 select : function(combo, records) {
-                    var record = records[0];
+                    var record = records;
+                    if (Ext.isArray(records)) {
+                        record = records[0];
+                    }
                     var nameField = this.findField("name");
                     var urlField = this.findField("url");
                     nameField.setValue(record.get("name"));
