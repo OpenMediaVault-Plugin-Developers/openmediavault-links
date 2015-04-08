@@ -1,3 +1,9 @@
+openmediavault-links (1.5) UNRELEASED; urgency=low
+
+  * Add ability to create tab in plugin
+
+ -- OpenMediaVault Plugin Developers <plugins@omv-extras.org>  Wed, 08 Apr 2015 08:49:56 -0500
+
 openmediavault-links (1.4) stable; urgency=low
 
   * Remove paging toolbar

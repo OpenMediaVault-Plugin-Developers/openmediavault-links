@@ -20,7 +20,8 @@ set -e
 . /etc/default/openmediavault
 . /usr/share/openmediavault/scripts/helper-functions
 
-MEDIA_DIR="/var/www/openmediavault/js/omv/module/admin/service/media/"
+PLUGIN_DIR="/var/www/openmediavault/js/omv/module/admin/service"
+MEDIA_DIR="${PLUGIN_DIR}/media/"
 
 if [ ! -d "${MEDIA_DIR}" ]; then
     mkdir -p "${MEDIA_DIR}"
@@ -47,12 +48,13 @@ disable_csp=0
 while [ ${index} -le ${count} ]; do
 
     createtab=$(omv_config_get "//services/links/link[position()=${index}]/createtab")
+    plugintab=$(omv_config_get "//services/links/link[position()=${index}]/plugintab")
+    name=$(omv_config_get "//services/links/link[position()=${index}]/name")
+    url=$(omv_config_get "//services/links/link[position()=${index}]/url")
 
     if [ ${createtab} != 0 ]; then
         disable_csp=1
-        name=$(omv_config_get "//services/links/link[position()=${index}]/name")
         group=$(omv_config_get "//services/links/link[position()=${index}]/group")
-        url=$(omv_config_get "//services/links/link[position()=${index}]/url")
         fileupper="${MEDIA_DIR}${group}.js"
         filelower="${MEDIA_DIR}${group}/${name}.js"
 
@@ -120,6 +122,38 @@ OMV.MediaManager.register({
 });
 
 EOF
+    fi
+
+    if [ ${plugintab} != 0 ]; then
+        disable_csp=1
+        service_dir_name=$(echo ${name} | tr '[:upper:]' '[:lower:]')
+
+        if [ -d "${PLUGIN_DIR}/{service_dir_name}" ]; then
+
+            # create upper tab fileif not already created
+            cat <<EOF > "${PLUGIN_DIR}/{service_dir_name}/iframe.js"
+// require("js/omv/WorkspaceManager.js")
+// require("js/omv/workspace/panel/Panel.js")
+
+Ext.define("OMV.module.admin.service.${service_dir_name}.iframe", {
+    extend : "OMV.workspace.panel.Panel",
+
+    initComponent : function() {
+        this.html = "<iframe src='${url}' width='100%' height='100%' />";
+        this.callParent(arguments);
+    }
+});
+
+OMV.WorkspaceManager.registerPanel({
+    id        : "iframe",
+    path      : "/service/${service_dir_name}",
+    text      : _("Web Client"),
+    position  : 200,
+    className : "OMV.module.admin.service.${service_dir_name}.iframe"
+});
+
+EOF
+        fi
     fi
 
     index=$(( ${index} + 1 ))

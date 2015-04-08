@@ -25,11 +25,10 @@ require_once("openmediavault/util.inc");
 require_once("openmediavault/rpcservice.inc");
 require_once("openmediavault/notify.inc");
 
-class OMVRpcServiceLinks extends OMVRpcServiceAbstract {
-    /**
-     * Get the RPC service name.
-     */
-    public function getName() {
+class OMVRpcServiceLinks extends OMVRpcServiceAbstract
+{
+    public function getName()
+    {
         return "Links";
     }
 
@@ -40,7 +39,7 @@ class OMVRpcServiceLinks extends OMVRpcServiceAbstract {
 
     private function getXPath()
     {
-        return sprintf("//services/%s", $this->getPluginName());
+        return sprintf("/config/services/%s", $this->getPluginName());
     }
 
     private function getXPathLink()
@@ -136,6 +135,7 @@ class OMVRpcServiceLinks extends OMVRpcServiceAbstract {
 
         // Modify the result object.
         $object['createtab'] = boolval($object['createtab']);
+        $object['plugintab'] = boolval($object['plugintab']);
         
         return $object;
     }
@@ -161,7 +161,8 @@ class OMVRpcServiceLinks extends OMVRpcServiceAbstract {
                 "name"      : { "type" : "string" },
                 "group"     : { "type" : "string" },
                 "url"       : { "type" : "string" },
-                "createtab" : { "type" : "boolean" }
+                "createtab" : { "type" : "boolean" },
+                "plugintab" : { "type" : "boolean" }
             }
         }');
 
@@ -172,6 +173,7 @@ class OMVRpcServiceLinks extends OMVRpcServiceAbstract {
             "group"     => $params['group'],
             "url"       => $params['url'],
             "createtab" => array_boolval($params, 'createtab'),
+            "plugintab" => array_boolval($params, 'plugintab')
         );
 
         // Set the configuration data.

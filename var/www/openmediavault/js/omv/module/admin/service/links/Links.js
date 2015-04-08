@@ -113,6 +113,11 @@ Ext.define("OMV.module.admin.service.links.Link", {
             name       : "createtab",
             fieldLabel : _("Media Tab"),
             checked    : false
+        },{
+            xtype      : "checkbox",
+            name       : "plugintab",
+            fieldLabel : _("Plugin Tab"),
+            checked    : false
         }];
     }
 });
