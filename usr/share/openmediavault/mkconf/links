@@ -128,10 +128,10 @@ EOF
         disable_csp=1
         service_dir_name=$(echo ${name} | tr '[:upper:]' '[:lower:]')
 
-        if [ -d "${PLUGIN_DIR}/{service_dir_name}" ]; then
+        if [ -d "${PLUGIN_DIR}/${service_dir_name}" ]; then
 
-            # create upper tab fileif not already created
-            cat <<EOF > "${PLUGIN_DIR}/{service_dir_name}/iframe.js"
+            # create iframe tab file
+            cat <<EOF > "${PLUGIN_DIR}/${service_dir_name}/iframe.js"
 // require("js/omv/WorkspaceManager.js")
 // require("js/omv/workspace/panel/Panel.js")
 
