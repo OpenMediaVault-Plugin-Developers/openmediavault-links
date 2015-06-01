@@ -3,14 +3,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Miguel Anxo Bouzada <mbouzada@gmail.com>, 2014
+# Miguel Anxo Bouzada <mbouzada@gmail.com>, 2014-2015
 msgid ""
 msgstr ""
 "Project-Id-Version: openmediavault-links\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-04-08 09:34-0500\n"
-"PO-Revision-Date: 2015-04-08 14:37+0000\n"
-"Last-Translator: Aaron Murray <aaron27@ryecoinc.com>\n"
+"POT-Creation-Date: 2015-06-01 08:01-0500\n"
+"PO-Revision-Date: 2015-04-23 12:16+0000\n"
+"Last-Translator: Miguel Anxo Bouzada <mbouzada@gmail.com>\n"
 "Language-Team: Galician (http://www.transifex.com/projects/p/openmediavault-links/language/gl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -34,19 +34,19 @@ msgid "Links"
 msgstr "Ligazóns"
 
 msgid "Media Tab"
-msgstr ""
+msgstr "Lapela multimedia"
 
 msgid "Name"
 msgstr "Nome"
 
 msgid "No spaces allowed in name."
-msgstr ""
+msgstr "Non se permiten espazos no nome."
 
 msgid "Plugin Tab"
-msgstr ""
+msgstr "Lapela de engadidos"
 
 msgid "Preset"
-msgstr ""
+msgstr "Predefinición"
 
 msgid "URL"
 msgstr "URL"
