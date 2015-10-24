@@ -27,6 +27,8 @@ set -e
 case "$1" in
     remove)
         rm -rf /var/www/openmediavault/js/omv/module/admin/service/media
+        rm /var/www/openmediavault/js/omv/module/admin/dashboard/part/Links.js
+        rm /var/www/openmediavault/js/omv/module/admin/dashboard/view/Links.js
         ;;
 
     purge)
